@@ -1,7 +1,7 @@
-<h1 align='center'>
+<h2 align='center'>
 Remember and Reweight: Enhancing Multi-Agent Debate with<br>
 Experience Memory and Confidence Estimation
-</h1>
+</h2>
 
 <p align='center'>
   <a href="https://arxiv.org/abs/2609.03619"><img src="https://img.shields.io/badge/arXiv-2609.03619-b31b1b.svg" alt="arXiv"></a>
