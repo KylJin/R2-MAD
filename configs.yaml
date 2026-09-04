@@ -1,0 +1,46 @@
+llm_configs:
+  general_configs:
+    max_token_length: 24576
+    temperature: 1.0
+    top_p: 1
+    # ---- For API backends ----
+    max_workers: 16
+    max_retries: 5
+    request_timeout: 120
+  
+  # ---- Local models served by vLLM ----
+  # Replace the `null` path to your local model path
+  qwen2.5-7b:
+    backend: vllm
+    model: "Qwen/Qwen2.5-7B-Instruct"
+    model_path: null
+  
+  qwen3-8b:
+    backend: vllm
+    model: "Qwen/Qwen3-8B"
+    model_path: null
+
+  gemma-3-4b:
+    backend: vllm
+    model: "google/gemma-3-4b-it"
+    model_path: null
+  
+  qwen3-4b:
+    backend: vllm
+    model: "Qwen/Qwen3-4B-Instruct-2507"
+    model_path: null
+  
+  # ---- Remote models served by the OpenRouter API ----
+  # Requires the OPENROUTER_API_KEY environment variable.
+  llama-3.3-70b:
+    backend: openrouter
+    model: "meta-llama/llama-3.3-70b-instruct"
+  
+  gpt-4o-mini:
+    backend: openrouter
+    model: "openai/gpt-4o-mini"
+
+embedding_configs:
+  bge-m3:
+    model: "BAAI/bge-m3"
+    model_path: null
